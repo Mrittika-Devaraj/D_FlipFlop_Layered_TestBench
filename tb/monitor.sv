@@ -13,7 +13,7 @@ class monitor;
     task run();
         transaction tr;
 
-        forever begin
+        repeat (6) begin
             @(posedge vif.clk);
             #1;
 

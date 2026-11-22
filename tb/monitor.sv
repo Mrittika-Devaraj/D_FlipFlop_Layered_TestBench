@@ -12,7 +12,7 @@ class monitor;
 
     task run();
         transaction tr;
-
+        @(negedge vif.clk);
         repeat (6) begin
             @(posedge vif.clk);
             #1;

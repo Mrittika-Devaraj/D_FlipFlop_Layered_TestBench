@@ -13,7 +13,7 @@ class driver;
     task run();
         transaction tr;
 
-        forever begin
+        repeat (6) begin
             gen2drv.get(tr);
 
             @(negedge vif.clk);

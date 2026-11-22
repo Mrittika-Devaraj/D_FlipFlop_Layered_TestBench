@@ -14,7 +14,7 @@ class scoreboard;
         transaction tr;
         bit expected_q;
 
-        forever begin
+        repeat (6) begin
             mon2scb.get(tr);
 
             if (tr.rst_n == 0)
